@@ -14,7 +14,6 @@ model Account {
     @permission(expression: true, actions: [get,create,list,update])
 }
 
-
 model Organisation {
     fields {
         name Text
