@@ -1,11 +1,11 @@
 model Account {
     fields {
         name Text
-        organisation Organisation
+       // organisation Organisation
     }
 
     actions {
-        create createAccount() with (name, organisation.id)
+        create createAccount() with (name)//, organisation.id)
         get getAccount(id)
        // list listAccounts()
        // update updateAccount(id) with (name)
@@ -15,17 +15,17 @@ model Account {
 }
 
 
-model Organisation {
-    fields {
-        name Text
-        accounts Account[]
-    }
+//model Organisation {
+//    fields {
+ //       name Text
+//        accounts Account[]
+//    }
 
-    actions {
-        create createOrganisation() with (name)
-        get getOrganisation(id)
-        list listOrganisations()
-    }
+//    actions {
+//        create createOrganisation() with (name)
+//        get getOrganisation(id)
+//        list listOrganisations()
+//    /}
 
-    @permission(expression: true, actions: [get,create,list,update])
-}
+   // @permission(expression: true, actions: [get,create,list,update])
+//}
