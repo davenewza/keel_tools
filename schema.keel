@@ -6,9 +6,9 @@ model Account {
 
     actions {
         create createAccount() with (name, organisation.id)
-        get getAccount(id)
-        list listAccounts()
-        update updateAccount(id) with (name)
+      //  get getAccount(id)
+       // list listAccounts()
+       // update updateAccount(id) with (name)
     }
 
     @permission(expression: true, actions: [get,create,list,update])
@@ -22,9 +22,9 @@ model Organisation {
     }
 
     actions {
-        create createOrganisation() with (name)
-        get getOrgisation(id)
-        list listOrgisations()
+      //  create createOrganisation() with (name)
+       // get getOrgisation(id)
+      //  list listOrgisations()
     }
 
     @permission(expression: true, actions: [get,create,list,update])
